@@ -1,1 +1,87 @@
+def choose_action():
 
+  global day
+
+  print()
+
+  print("========================================")
+  print("                    WHAT WILL YOU DO?)
+
+  print("=========================================")
+
+  print()
+  print("1.Find water")
+  print("2.Find food")
+  print("3.Repair power")
+  print("4.Help the community")
+  print("5.Study")
+  print("6.Explore")
+  print("7.View status")
+
+  choice = input("Choose an action: ")
+
+  if choice == "1":
+
+    find_water()
+
+  elif choice == "2":
+
+    find_food()
+
+  elif choice == "3":
+
+    repair_power()
+
+  elif choice == "4":
+
+    help_community()
+
+  elif choice == "5":
+
+    study()
+
+  elif choice == "6":
+
+    explore()
+
+  elif choice == "7":
+
+    show_status()
+    show_skills()
+
+  else:
+    print()
+    print("Invalid choice.")
+
+
+
+#----------------------------------------#
+#END OF DAY
+#----------------------------------------#
+
+def end_day():
+
+  global water
+  global food
+  global energy
+  global day
+
+  print()
+
+print("========================================")
+  print("                    END OF DAY")
+
+print("=========================================")
+
+  print("Every person in the commmunity consumes resources.")
+
+  water = water - 1
+  food = food - 1
+  energy = energy - 1
+
+  print()
+  print("Water -1")
+  print("Food -1')
+  print('Energy -1")
+
+  day = day + 1
