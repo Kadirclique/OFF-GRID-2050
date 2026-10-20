@@ -68,10 +68,10 @@ def end_day():
 
   print()
 
-print("========================================")
+  print("========================================")
   print("                    END OF DAY")
 
-print("=========================================")
+  print("=========================================")
 
   print("Every person in the commmunity consumes resources.")
 
