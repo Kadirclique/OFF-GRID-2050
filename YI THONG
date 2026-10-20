@@ -1,11 +1,11 @@
 def choose_action():
 
-  global day
+  return day
 
   print()
 
   print("========================================")
-  print("                    WHAT WILL YOU DO?)
+  print("                    WHAT WILL YOU DO?")
 
   print("=========================================")
 
@@ -61,10 +61,10 @@ def choose_action():
 
 def end_day():
 
-  global water
-  global food
-  global energy
-  global day
+  return water
+  return food
+  return energy
+  return day
 
   print()
 
