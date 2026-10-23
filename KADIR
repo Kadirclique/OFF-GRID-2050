@@ -1,1 +1,85 @@
+  if game_running :
+print("\n========================================================================")
+print("                       WHAT WILL YOU DO?                            ")
+print("1. Find water")
+print("2. Find food")
+print("3. Repair power")
+print("4. Help the community")
+print("5. Study")
+print("6. Explore")
+print("7. View status and skills")
+choice = input("\nChoose an action: ")
 
+    if choice == "1" :
+    print("\You search for a nearby water source.")
+      if energy >= 2:
+        water = water + 4
+        energy = energy - 2 
+        skill_scores[1] = skill_scores[1] + 1
+        survival_points = survival_points + 2
+    print("You discovered an underground water tank. Water +4")
+      else:
+    print("You are too exhausted to search for water. Nothing happens)
+    elif choice == '2' :
+      if energy >= 2:
+        food = food + 4
+        energy = energy - 2
+        skill_scores[1] = skill_scores[1] + 1
+        survival_points = survival_points + 2
+    print("You found emergency food supplies. Food +4; Energy -2. "
+      else :
+    print("You are too exhausted to search for food.Nothing happens")
+    elif choice == '3' :
+      print("\nYou attempt to repair a local generator.")
+      if knowledge >= 3 :
+        knowledge = knowledge - 1
+        energy = energy + 4
+        skill_scores[0] = skill_scores[0] + 1
+        skill_scores[3] = skill_scores[3] + 1
+        survival_points = survival_points + 3
+        print("You repaired the generator. Energy +4; Knowledge -1")
+      else:
+        print("You dont have enough technical knowlegde. The repair failed.")
+        energy = energy - 1
+    elif choice == '4' :
+      print("n\You spend time helping other people.")
+      if energy >= 2 :
+        energy = energy - 2
+        trust = trust + 3
+        skill_scores[2] = skill_scores[2] + 1
+        skill_scores[4] = skill_scores[4] + 1
+        survival_points = survival_points + 3
+        print("The community appreciates your leadership. Trust +3; Energy -2")
+      else:
+        print("You are too tired to help anyone.")
+    elif choice == '5' :
+      print("\nYou Study old engineering and survival manuals.")
+      if energy >= 1 :
+        energy = energy - 1
+        knowledge = knowledge + 2 
+        skill_scores[0] = skill_scores[0] + 1
+        skill_scores[3] = skill_scores[3] + 1
+        survival_points = survival_points + 2  
+        print("You learned useful survival knowledge. Knowledge +2 ; Energy -1")
+      else:
+        print("You are too tired to study.")
+    elif choice == '6' :
+      print("n\You explore the city looking for result resources.")
+      if energy >= 3 :
+        energy = energy - 3
+        water = water + 2
+        food = food + 2
+        knowledge = knowledge + 1
+        skill_scores[0] = skill_scores[0] + 1
+        skill_scores[1] = skill_scoresp[1] + 1
+        survival_points = survival_points + 4
+        print("You find an emergency shelter with water, food, and manuals.")
+        print("Water +2; Food +2; Knowledge +1; Energy -3")
+      else :
+        print("You do not have enough enrgy to explore.")
+    elif choice == '7' :
+      print("\nHUMAN SKILLS")
+      for i in range(len(skills)):
+          print(skills[i], ":", skill_scores[i])
+    else:
+      print("\nInvalid choice.")
